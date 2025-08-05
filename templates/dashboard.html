@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Machine Monitoring Dashboard</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css')}}">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class="card">
+            <h2>🌡️ Machine Monitoring Dashboard</h2>
+            <p class="temperature" id="temp">--°C</p>
+            <p class="status" id="status">Loading...</p>
+            <p id="limits">(Safe Temp Limit: °C, Max Runtime: hrs)</p>
+            <p id="runtime">Current Runtime: -- hrs</p>
+            <canvas id="lineChart" width="400" height="200"></canvas>
+
+            <a href="{{ url_for('logout')}}"><button class="logout">Logout</button></a>
+        </div>
+        <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    </body>
+</html>

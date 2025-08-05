@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title>BreakBot</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/homepage.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 py-3">
+                <img class="logo" src="{{ url_for('static', filename='images/Logo.png')}}" alt="logo">
+                <a class="navbar-brand fw-bold text-primary" href="#">Breakbot</a>
+                <div class="ms-auto">
+                <button id="login" onclick="loginPage()">Login</button>
+                <button id="signup" onclick="signupPage()">Get Started</button>
+                </div>
+            </nav>
+        </header>
+        <div class="bg-overlay"></div>
+        
+        <div id="whitescreen">
+            <section>
+                <h1>BreakBot: Intelligent Monitoring system for MSMEs</h1>
+                <p>
+                    Automate fault detection and reporting to keep your operations running smoothly. BreakBot is a cloud-based, AI-powered solution designed to provide real-time machine health monitoring, reducing downtime and optimizing maintenance for micro, small, and medium enterprises.
+                </p>
+                <div class="outer-container">
+                    <div class="info-grid-div">
+                        <h2>Reduced Downtime</h2>
+                        <p>
+                            Minimize operational interruptions with proactive fault detection, ensuring your machinery runs continuously.
+                        </p>
+                    </div>
+                    <div class="info-grid-div">
+                        <h2>Cost Savings</h2>
+                        <p>
+                            Avoid expensive emergency repairs and optimize maintenance schedules, reducing operational costs.
+                        </p>
+                    </div>
+                    <div class="info-grid-div">
+                        <h2>Increased Efficiency</h2>
+                        <p>
+                            Enhance productivity by preventing unexpected breakdowns and streamlining workflows.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!--section 2 -->
+            <section>
+                <h1>Project Overview</h1>
+                <p>
+                    BreakBot serves a diverse range of industries, from manufacturing to automotive and energy. Our adaptable solution ensures seamless integration with both legacy and new machines through non-invasive sensors.
+                </p>
+                <div class="outer-container">
+                    <div class="info-grid-div">
+                        <div class="img-heading">
+                            <div class="img-div">
+                                <img class="icons" src="{{ url_for('static', filename='images/robot.svg')}}" alt="robot">
+                            </div>
+                            <div class="headings">
+                                <h4>Program-Powered Insights</h4>
+                            </div>
+                        </div>
+                        <div class="content">
+                            Intelligent algorithms predict potential failures before they occur.    
+                        </div>
+                    </div>
+                    <div class="info-grid-div">
+                        <div class="img-heading">
+                            <div class="img-div">
+                                <img class="icons" src="{{ url_for('static', filename='images/cloud.svg')}}" alt="cloud">
+                            </div>
+                            <div class="headings">
+                                <h4>
+                                    Cloud-Based
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p>
+                                Access your machine data securely from anywhere, anytime.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-grid-div">
+                        <div class="img-heading">
+                            <div class="img-div">
+                                <img class="icons" src="{{ url_for('static', filename='images/gauge.svg')}}" alt="gauge">
+                            </div>
+                            <div class="headings">
+                                <h4>
+                                    Real-time Monitoring
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="content">
+                            Stay informed with live data on your machine's health.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Section 3-->
+            <section>
+                <h1>Advantages for Companies</h1>
+                <p>
+                    BreakBot offers unparalleled advantages by transforming reactive maintenance into a proactive strategy. Our system's early fault detection capabilities ensure that minor issues are identified and addressed before escalating into costly breakdowns, minimizing operational disruptions and extending asset lifespan.
+                </p>
+                <div class="outer-container">
+                    <div class="info-grid-div">
+                        <h2>Cost Savings</h2>
+                        <p>
+                            Prevent expensive emergency repairs and reduce unscheduled downtime.
+                        </p>
+                    </div>
+                    <div class="info-grid-div">
+                        <h2>Automated Alerts</h2>
+                        <p>
+                            Receive instant notifications, eliminating the need for constant manual checks.
+                        </p>
+                    </div>
+                    <div class="info-grid-div">
+                        <h2>Real-time Tracking</h2>
+                        <p>
+                            Monitor critical parameters like temperature and vibration for optimal machine performance.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!--Section 4-->
+            <section>
+                <h1>Use Case and Industry Impact</h1>
+                <p>
+                    BreakBot serves a diverse range of industries, from manufacturing to automotive and energy. Our adaptable solution ensures seamless integration with both legacy and new machines through non-invasive sensors, allowing businesses to make data-driven decisions and optimize their maintenance strategies. Discover how BreakBot can transform your operations.
+                </p>
+                <div class="list-img-container">
+                    <ul>
+                        <li>Manufacturing plants optimize production lines.</li>
+                        <li>Automotive factories reduce equipment failures.</li>
+                        <li>Energy providers ensure continuous power generation.</li>
+                        <li>Heavy machinery operators minimize repair costs.</li>
+                    </ul>
+                    <img id="factory-img" src="{{url_for('static', filename='images/red_factory.jpg')}}" alt="factory">
+                </div>
+            </section>
+        </div>
+        <footer style="text-align: center; color: white">
+            <p>&copy;2025 All rights reserved</p>
+        </footer>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+</html>
